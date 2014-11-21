@@ -1,0 +1,59 @@
+<div class="nav-inner clearfix">
+    <div class="nav-logo">
+        <a href="/" class="logo-box">
+            <img src="<%=__uri('/static/style/image/toutiaoweblogo.png')%>" class="logo"></a>
+    </div>
+    <div class="nav-list large">
+        <ul class="clearfix">
+            <li>
+                <a class="btn selected" href="//web.toutiao.com/"> <i class="icon icon-home icon-large"></i>
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a class="btn" href="//web.toutiao.com/updates/"> <i class="icon icon-dynamic icon-large"></i>
+                    <span>动态</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div data-node="searchBox" class="search-box">
+        <form action="/search/" method="get" data-node="searchForm">
+            <div class="input-group clearfix">
+                <input data-node="searchInput" name="keyword" type="text" placeholder="请输入搜索关键词" value="<%=keyword%>">
+                <button type="submit" href="javascript:;" class="btn">
+                    <i class="icon icon-search icon-large"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="nav-list normal">
+        <ul class="clearfix">
+            <li class="username-box" data-node="username">
+                <a class="btn user-head" href="javascript:;" data-node="login">
+                    <span>登录</span>
+                </a>
+                <i class="line"></i>
+            </li>
+            <li>
+                <a target="_blank" class="btn" href="http://mp.toutiao.com/">
+                    <i class="icon icon-pgc icon-normal"></i>
+                    <span>媒体平台</span>
+                </a>
+                <i class="line"></i>
+            </li>
+            <li class="more-box" data-node="more">
+                <a target="_blank" class="btn" href="http://web.toutiao.com/about/">
+                    <i class="icon icon-more icon-normal"></i>
+                    <span>更多</span>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" class="btn" href="//app.toutiao.com/">
+                    <i class="icon icon-download icon-normal"></i>
+                    <span style="border-right:none;padding-right:0;">下载</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

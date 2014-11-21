@@ -1,0 +1,39 @@
+<div class="dialog" style="position:absolute;">
+    <a class="btn" data-node="close">
+        <i class="icon icon-close"></i>
+    </a>
+    <div class="dialog-header">
+        <h3>登录</h3>
+    </div>
+    <div class="dialog-inner" data-node="inner">
+        <div class="login-pannel clearfix">
+            <div>
+                <form data-node="loginForm" action="/auth/login/" method="POST">
+                    <ul>
+                        <li>
+                            <div class="input-group">
+                                <input class="name" name="name_or_email" type="text" placeholder="用户名/注册邮箱">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="input-group">
+                                <input class="password" name="password" type="password" data-node="password" placeholder="密码">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="input-group">
+                                <input type="checkbox" name="remember_me" checked="" style="vertical-align:top">
+                                <label for="remember_me" class="label">记住我</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="input-group">
+                                <input type="submit" class="submit-btn" value="登录">
+                                <span class="error" data-node="errorMsg"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+    </div>
+</div>

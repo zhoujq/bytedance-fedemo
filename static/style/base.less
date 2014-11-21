@@ -1,0 +1,184 @@
+@import "/static/style/reset.inline.less";
+
+@-webkit-keyframes popUp {
+    from { -webkit-transform: scale(0); }
+    to { -webkit-transform: scale(1); }
+}
+@keyframes popUp {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+html, body, #wrapper, #container {
+    height: 100%;
+    font: 12px/1.4 'Arial','Helvetica', 'STHeiti', 'Microsoft YaHei', sans-serif;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+.clearfix {
+    display: block;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+#wrapper {
+    position: relative;
+}
+#container {
+    width: 1002px;
+    margin: 0 auto;
+    margin-top: 68px;
+    &:after, &:before {
+        display: table;
+        content: " "
+    }
+    &:after {
+        clear: both
+    }
+}
+.company {
+    p, a {
+        line-height: 25px;
+        font-size: 13px;
+        color: #83868B;
+    }
+}
+.icon {
+    display: inline-block;
+    &.icon-home {
+        background: url('/static/style/image/home_ic_home_normal.png?__sprite') center no-repeat;
+    }
+    &.icon-dynamic {
+        background: url('/static/style/image/home_ic_dynamic_normal.png?__sprite') center no-repeat;
+    }
+    &.icon-pgc {
+        background: url('/static/style/image/home_ic_pgc_normal.png?__sprite') center no-repeat;
+    }
+    &.icon-more {
+        background: url('/static/style/image/home_ic_more_normal.png?__sprite') center no-repeat;
+    }
+    &.icon-download {
+        background: url('/static/style/image/home_ic_download_normal.png?__sprite') center no-repeat;
+    }
+    &.icon-search {
+        background: url('/static/style/image/home_ic_search_normal.png?__sprite') center no-repeat;
+    }
+    &.icon-close {
+        background: url('/static/style/image/home_ic_close_normal.png?__sprite') center no-repeat;
+    }
+}
+.selected, .btn:hover {
+    .icon {
+        &.icon-home {
+            background: url('/static/style/image/home_ic_home_selected.png?__sprite') center no-repeat;
+        }
+        &.icon-dynamic {
+            background: url('/static/style/image/home_ic_dynamic_selected.png?__sprite') center no-repeat;
+        }
+        &.icon-pgc {
+            background: url('/static/style/image/home_ic_pgc_clicked.png?__sprite') center no-repeat;
+        }
+        &.icon-more {
+            background: url('/static/style/image/home_ic_more_clicked.png?__sprite') center no-repeat;
+        }
+        &.icon-download {
+            background: url('/static/style/image/home_ic_download_clicked.png?__sprite') center no-repeat;
+        }
+        &.icon-search {
+            background: url('/static/style/image/home_ic_search_clicked.png?__sprite') center no-repeat;
+        }
+        &.icon-close {
+            background: url('/static/style/image/home_ic_close_clicked.png?__sprite') center no-repeat;
+        }
+    }
+}
+.icon-large {
+    width: 17px;
+    height: 16px;
+    line-height: 16px;
+}
+.icon-normal {
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+}
+.icon-small {
+    width: 13px;
+    height: 12px;
+    line-height: 12px;
+}
+.container-main {
+    float: left;
+    width: 660px;
+}
+.container-right {
+    float: right;
+    width: 218px;
+}
+.dialog {
+    color: #4E4E4E;
+    background-color: #fff;
+    border-radius: 3px;
+    z-index: 15;
+    .btn {
+        position: absolute;
+        right: 10px;
+        top: 13px;
+        display: block;
+        height: 18px;
+        width: 18px;
+        cursor: pointer;
+        .icon-close {
+            height: 8px;
+            width: 17px;
+        }
+    }
+    .dialog-header {
+        padding: 9px 15px;
+        border: 1px solid #ddd;
+        border-top: 2px solid #dc2525;
+        border-radius: 3px 3px 0 0;
+        border-bottom: 1px solid #ddd;
+        h3 {
+            font-size: 20px;
+            height: 20px;
+            color: #dc2525;
+            padding-left: 23px;
+            margin-left: -15px;
+            line-height: 20px;
+        }
+    }
+    .dialog-inner {
+        border: 1px solid #ddd;
+        border-top: none;
+        border-radius: 0 0 3px 3px;
+        padding-top: 15px;
+    }
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 14;
+    opacity: 0.8;
+    filter:alpha(opacity=80);
+    background-color: #000000;
+}
